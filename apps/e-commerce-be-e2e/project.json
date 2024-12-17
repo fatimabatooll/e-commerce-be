@@ -2,22 +2,16 @@
   "name": "e-commerce-be-e2e",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "implicitDependencies": [
-    "e-commerce-be"
-  ],
+  "implicitDependencies": ["e-commerce-be"],
   "targets": {
     "e2e": {
       "executor": "@nx/jest:jest",
-      "outputs": [
-        "{workspaceRoot}/coverage/{e2eProjectRoot}"
-      ],
+      "outputs": ["{workspaceRoot}/coverage/{e2eProjectRoot}"],
       "options": {
         "jestConfig": "apps/e-commerce-be-e2e/jest.config.ts",
         "passWithNoTests": true
       },
-      "dependsOn": [
-        "e-commerce-be:build"
-      ]
+      "dependsOn": ["e-commerce-be:build"]
     }
   }
 }
